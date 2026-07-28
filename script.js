@@ -57,15 +57,14 @@ function showHint() {
 
 function fadeOut(callback){
 
-    mainText.style.opacity = 0;
-    clickHint.style.opacity = 0;
+    mainText.style.opacity=0;
+    nextHeart.style.opacity=0;
 
     setTimeout(()=>{
 
         callback();
 
-        mainText.style.opacity = 1;
-        clickHint.style.opacity = 1;
+        mainText.style.opacity=1;
 
     },1200);
 
@@ -77,7 +76,7 @@ function fadeOut(callback){
 
 function firstScene(){
 
-    clickHint.innerHTML="";
+    nextHeart.classList.remove("showHeart");
 
     typeText("How you doing my bebo?");
 
@@ -95,14 +94,13 @@ function firstScene(){
 
 function secondScene(){
 
-    clickHint.innerHTML="";
+    nextHeart.classList.remove("showHeart");
 
     typeText("I Love You Lots Meri Jaan ❤️\n\nYou are the best thing that's ever happened to me.");
 
     setTimeout(()=>{
 
-        clickHint.innerHTML="👇 Click me 😘";
-        clickHint.classList.add("fadeIn");
+        showHint();
 
     },4500);
 
@@ -112,12 +110,11 @@ function secondScene(){
 // CLICK EVENTS
 // ------------------------------------------------
 
-mainText.addEventListener("click",()=>{
+nextHeart.addEventListener("click",()=>{
 
     if(scene===0){
 
         scene++;
-
         fadeOut(secondScene);
 
     }
@@ -125,14 +122,11 @@ mainText.addEventListener("click",()=>{
     else if(scene===1){
 
         scene++;
-
-        // next part
-        alert("Great! Part 4 will replace this with the apology scene ❤️");
+        alert("Great! Part 4 will replace this ❤️");
 
     }
 
 });
-
 // ------------------------------------------------
 // FLOATING PARTICLES
 // ------------------------------------------------
