@@ -3,7 +3,7 @@
 // ------------------------------------------------
 
 const mainText = document.getElementById("mainText");
-const clickHint = document.getElementById("clickHint");
+const nextHeart = document.getElementById("nextHeart");
 const buttonContainer = document.getElementById("buttonContainer");
 const particles = document.getElementById("backgroundParticles");
 
